@@ -7,25 +7,25 @@
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap');
   *{box-sizing:border-box;margin:0;padding:0;}
   body{background:linear-gradient(160deg,#1a0010 0%,#3d0020 50%,#1a0010 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:2rem 1rem 3rem;font-family:'Lato',sans-serif;}
-  .heading{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:#ffd0e0;letter-spacing:1px;margin-bottom:4px;text-align:center;}
-  .subhead{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e09090;margin-bottom:2rem;text-align:center;}
-  .stage{position:relative;width:340px;height:360px;cursor:pointer;}
+  .heading{font-family:'Playfair Display',serif;font-style:italic;font-size:26px;color:#ffd0e0;letter-spacing:1px;margin-bottom:5px;text-align:center;}
+  .subhead{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#e09090;margin-bottom:2rem;text-align:center;}
+  .stage{position:relative;width:480px;height:510px;}
   .petal{position:absolute;transform-origin:50% 100%;transition:opacity 0.2s;}
   .petal.gone{animation:petalDrop 1.3s ease-in forwards;pointer-events:none;}
   @keyframes petalDrop{
     0%{opacity:1;transform:var(--rot);}
-    20%{opacity:1;transform:var(--rot) translateY(-16px) rotate(12deg) scale(1.06);}
-    100%{opacity:0;transform:var(--rot) translateY(600px) rotate(260deg) scale(0.6);}
+    20%{opacity:1;transform:var(--rot) translateY(-22px) rotate(14deg) scale(1.07);}
+    100%{opacity:0;transform:var(--rot) translateY(700px) rotate(270deg) scale(0.55);}
   }
-  .promise-area{margin-top:1.4rem;min-height:58px;max-width:360px;text-align:center;padding:0 1rem;}
-  .promise-text{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:#ffb8cc;line-height:1.65;animation:fadeUp 0.45s ease;}
+  .promise-area{margin-top:1.6rem;min-height:62px;max-width:460px;width:100%;text-align:center;padding:0 1rem;}
+  .promise-text{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:#ffb8cc;line-height:1.65;animation:fadeUp 0.45s ease;}
   @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
-  .final-wrap{display:none;margin-top:1.4rem;max-width:380px;text-align:center;padding:1.2rem 1.5rem;border:1px solid #8b2040;border-radius:16px;background:rgba(80,0,30,0.55);animation:bloom 0.9s ease;}
+  .final-wrap{display:none;margin-top:1.5rem;max-width:460px;text-align:center;padding:1.4rem 1.8rem;border:1px solid #8b2040;border-radius:18px;background:rgba(80,0,30,0.55);animation:bloom 0.9s ease;}
   @keyframes bloom{from{opacity:0;transform:scale(0.88);}to{opacity:1;transform:none;}}
-  .final-wrap p{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:#ffd0e0;line-height:1.75;}
+  .final-wrap p{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:#ffd0e0;line-height:1.8;}
   .hearts{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;}
-  .fh{position:absolute;font-size:18px;animation:fhUp 2s ease-out forwards;opacity:0;}
-  @keyframes fhUp{0%{opacity:1;transform:translateY(0) scale(1);}100%{opacity:0;transform:translateY(-240px) scale(1.4);}}
+  .fh{position:absolute;font-size:22px;animation:fhUp 2s ease-out forwards;opacity:0;}
+  @keyframes fhUp{0%{opacity:1;transform:translateY(0) scale(1);}100%{opacity:0;transform:translateY(-280px) scale(1.5);}}
 </style>
 </head>
 <body>
@@ -34,7 +34,7 @@
 <div class="subhead">For Kanishka &nbsp;❤</div>
 
 <div class="stage" id="stage">
-<svg width="340" height="360" viewBox="0 0 340 360" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
+<svg width="480" height="510" viewBox="0 0 480 510" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
   <defs>
     <radialGradient id="rg1" cx="40%" cy="35%" r="65%">
       <stop offset="0%" stop-color="#ff6688"/>
@@ -61,63 +61,63 @@
       <stop offset="60%" stop-color="#cc2255"/>
       <stop offset="100%" stop-color="#770020"/>
     </radialGradient>
-    <filter id="ps" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#330010" flood-opacity="0.7"/>
+    <filter id="ps" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#330010" flood-opacity="0.75"/>
     </filter>
   </defs>
 
   <g id="p0" class="petal" style="--rot:rotate(-2deg);" filter="url(#ps)">
-    <path d="M170,185 C148,155 130,115 138,72 C143,45 158,28 170,20 C182,28 197,45 202,72 C210,115 192,155 170,185Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="0.8"/>
-    <path d="M170,175 C155,150 142,118 148,82 C152,60 162,44 170,36 C178,44 188,60 192,82 C198,118 185,150 170,175Z" fill="#ff7799" opacity="0.25"/>
+    <path d="M240,265 C208,222 182,162 193,101 C200,62 221,38 240,26 C259,38 280,62 287,101 C298,162 272,222 240,265Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="1"/>
+    <path d="M240,252 C222,214 208,168 215,114 C221,84 233,62 240,50 C247,62 259,84 265,114 C272,168 258,214 240,252Z" fill="#ff7799" opacity="0.25"/>
   </g>
 
-  <g id="p1" class="petal" style="--rot:rotate(49deg);transform-origin:170px 210px;" filter="url(#ps)">
-    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg2)" stroke="#5a0018" stroke-width="0.8" transform="rotate(49,170,210)"/>
-    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ff6688" opacity="0.22" transform="rotate(49,170,210)"/>
+  <g id="p1" class="petal" style="--rot:rotate(49deg);transform-origin:240px 295px;" filter="url(#ps)">
+    <path d="M240,295 C208,252 182,192 193,131 C200,92 221,68 240,56 C259,68 280,92 287,131 C298,192 272,252 240,295Z" fill="url(#rg2)" stroke="#5a0018" stroke-width="1" transform="rotate(49,240,295)"/>
+    <path d="M240,282 C222,244 208,198 215,144 C221,114 233,92 240,80 C247,92 259,114 265,144 C272,198 258,244 240,282Z" fill="#ff6688" opacity="0.22" transform="rotate(49,240,295)"/>
   </g>
 
-  <g id="p2" class="petal" style="--rot:rotate(100deg);transform-origin:170px 210px;" filter="url(#ps)">
-    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg3)" stroke="#5a0018" stroke-width="0.8" transform="rotate(100,170,210)"/>
-    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ee5577" opacity="0.22" transform="rotate(100,170,210)"/>
+  <g id="p2" class="petal" style="--rot:rotate(100deg);transform-origin:240px 295px;" filter="url(#ps)">
+    <path d="M240,295 C208,252 182,192 193,131 C200,92 221,68 240,56 C259,68 280,92 287,131 C298,192 272,252 240,295Z" fill="url(#rg3)" stroke="#5a0018" stroke-width="1" transform="rotate(100,240,295)"/>
+    <path d="M240,282 C222,244 208,198 215,144 C221,114 233,92 240,80 C247,92 259,114 265,144 C272,198 258,244 240,282Z" fill="#ee5577" opacity="0.22" transform="rotate(100,240,295)"/>
   </g>
 
-  <g id="p3" class="petal" style="--rot:rotate(151deg);transform-origin:170px 210px;" filter="url(#ps)">
-    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="0.8" transform="rotate(151,170,210)"/>
-    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ff7799" opacity="0.22" transform="rotate(151,170,210)"/>
+  <g id="p3" class="petal" style="--rot:rotate(151deg);transform-origin:240px 295px;" filter="url(#ps)">
+    <path d="M240,295 C208,252 182,192 193,131 C200,92 221,68 240,56 C259,68 280,92 287,131 C298,192 272,252 240,295Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="1" transform="rotate(151,240,295)"/>
+    <path d="M240,282 C222,244 208,198 215,144 C221,114 233,92 240,80 C247,92 259,114 265,144 C272,198 258,244 240,282Z" fill="#ff7799" opacity="0.22" transform="rotate(151,240,295)"/>
   </g>
 
-  <g id="p4" class="petal" style="--rot:rotate(202deg);transform-origin:170px 210px;" filter="url(#ps)">
-    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg2)" stroke="#5a0018" stroke-width="0.8" transform="rotate(202,170,210)"/>
-    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ff6688" opacity="0.22" transform="rotate(202,170,210)"/>
+  <g id="p4" class="petal" style="--rot:rotate(202deg);transform-origin:240px 295px;" filter="url(#ps)">
+    <path d="M240,295 C208,252 182,192 193,131 C200,92 221,68 240,56 C259,68 280,92 287,131 C298,192 272,252 240,295Z" fill="url(#rg2)" stroke="#5a0018" stroke-width="1" transform="rotate(202,240,295)"/>
+    <path d="M240,282 C222,244 208,198 215,144 C221,114 233,92 240,80 C247,92 259,114 265,144 C272,198 258,244 240,282Z" fill="#ff6688" opacity="0.22" transform="rotate(202,240,295)"/>
   </g>
 
-  <g id="p5" class="petal" style="--rot:rotate(253deg);transform-origin:170px 210px;" filter="url(#ps)">
-    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg3)" stroke="#5a0018" stroke-width="0.8" transform="rotate(253,170,210)"/>
-    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ee5577" opacity="0.22" transform="rotate(253,170,210)"/>
+  <g id="p5" class="petal" style="--rot:rotate(253deg);transform-origin:240px 295px;" filter="url(#ps)">
+    <path d="M240,295 C208,252 182,192 193,131 C200,92 221,68 240,56 C259,68 280,92 287,131 C298,192 272,252 240,295Z" fill="url(#rg3)" stroke="#5a0018" stroke-width="1" transform="rotate(253,240,295)"/>
+    <path d="M240,282 C222,244 208,198 215,144 C221,114 233,92 240,80 C247,92 259,114 265,144 C272,198 258,244 240,282Z" fill="#ee5577" opacity="0.22" transform="rotate(253,240,295)"/>
   </g>
 
-  <g id="p6" class="petal" style="--rot:rotate(304deg);transform-origin:170px 210px;" filter="url(#ps)">
-    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="0.8" transform="rotate(304,170,210)"/>
-    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ff7799" opacity="0.22" transform="rotate(304,170,210)"/>
+  <g id="p6" class="petal" style="--rot:rotate(304deg);transform-origin:240px 295px;" filter="url(#ps)">
+    <path d="M240,295 C208,252 182,192 193,131 C200,92 221,68 240,56 C259,68 280,92 287,131 C298,192 272,252 240,295Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="1" transform="rotate(304,240,295)"/>
+    <path d="M240,282 C222,244 208,198 215,144 C221,114 233,92 240,80 C247,92 259,114 265,144 C272,198 258,244 240,282Z" fill="#ff7799" opacity="0.22" transform="rotate(304,240,295)"/>
   </g>
 
   <g id="innerPetals">
-    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.6" transform="rotate(24,170,195)"/>
-    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.6" transform="rotate(96,170,195)"/>
-    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg5)" stroke="#6a0820" stroke-width="0.6" transform="rotate(168,170,195)"/>
-    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg5)" stroke="#6a0820" stroke-width="0.6" transform="rotate(240,170,195)"/>
-    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.6" transform="rotate(312,170,195)"/>
+    <path d="M240,275 C222,250 212,218 219,178 C224,152 234,136 240,126 C246,136 256,152 261,178 C268,218 258,250 240,275Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.8" transform="rotate(24,240,275)"/>
+    <path d="M240,275 C222,250 212,218 219,178 C224,152 234,136 240,126 C246,136 256,152 261,178 C268,218 258,250 240,275Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.8" transform="rotate(96,240,275)"/>
+    <path d="M240,275 C222,250 212,218 219,178 C224,152 234,136 240,126 C246,136 256,152 261,178 C268,218 258,250 240,275Z" fill="url(#rg5)" stroke="#6a0820" stroke-width="0.8" transform="rotate(168,240,275)"/>
+    <path d="M240,275 C222,250 212,218 219,178 C224,152 234,136 240,126 C246,136 256,152 261,178 C268,218 258,250 240,275Z" fill="url(#rg5)" stroke="#6a0820" stroke-width="0.8" transform="rotate(240,240,275)"/>
+    <path d="M240,275 C222,250 212,218 219,178 C224,152 234,136 240,126 C246,136 256,152 261,178 C268,218 258,250 240,275Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.8" transform="rotate(312,240,275)"/>
   </g>
 
-  <circle cx="170" cy="185" r="30" fill="url(#centerG)" stroke="#880030" stroke-width="1"/>
-  <circle cx="170" cy="185" r="20" fill="#ff99aa" opacity="0.35"/>
-  <circle cx="163" cy="178" r="8" fill="#ffbbcc" opacity="0.4"/>
+  <circle cx="240" cy="262" r="42" fill="url(#centerG)" stroke="#880030" stroke-width="1.2"/>
+  <circle cx="240" cy="262" r="28" fill="#ff99aa" opacity="0.35"/>
+  <circle cx="230" cy="252" r="11" fill="#ffbbcc" opacity="0.42"/>
 
-  <path d="M170,215 C170,240 162,268 158,300" stroke="#2d6e20" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M162,255 C140,242 125,248 118,260 C132,262 148,258 162,268" fill="#3a8228" stroke="none"/>
-  <path d="M164,275 C148,270 138,278 134,290 C146,289 156,283 166,280" fill="#337020" stroke="none"/>
+  <path d="M240,304 C240,336 229,375 224,422" stroke="#2d6e20" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M229,360 C198,343 178,350 168,366 C186,369 208,364 229,378" fill="#3a8228"/>
+  <path d="M231,390 C210,384 196,394 191,410 C207,409 221,401 234,397" fill="#337020"/>
 
-  <text x="170" y="330" text-anchor="middle" font-family="'Playfair Display',serif" font-style="italic" font-size="11" fill="#e09090" letter-spacing="1">tap a petal ✦</text>
+  <text x="240" y="468" text-anchor="middle" font-family="'Playfair Display',serif" font-style="italic" font-size="13" fill="#e09090" letter-spacing="1.5">tap a petal ✦</text>
 </svg>
 <div class="hearts" id="hearts"></div>
 </div>
@@ -126,7 +126,7 @@
   <div class="promise-text" id="promText">Each petal holds a promise for you 🌹</div>
 </div>
 <div class="final-wrap" id="finalWrap">
-  <p>Kanishka, you are my calm in chaos, my smile on hard days, and my happiest thought every night. Every promise I've made today lives in my heart — not just for today, but for every day I get to love you. You are my favourite human being that could ever exist.... ❤</p>
+  <p>Kanishka, you are my calm in chaos, my smile on hard days, and my happiest thought every night. Every promise I've made today lives in my heart — not just for today, but for every day I get to love you. You are my favourite feeling. ❤</p>
 </div>
 
 <script>
@@ -134,8 +134,8 @@ const promises = [
   "I promise to always choose us, even on the hardest days. 🌹",
   "I promise your happiness will always matter to me. 💕",
   "I promise to be your safe place, always. 🤍",
-  "I promise to love you more than you expect me to. ✨",
-  "I promise to never stop making you feel special, save, cared, loved. 🌸",
+  "I promise to love you more than you expect, every time. ✨",
+  "I promise to never stop making you feel special. 🌸",
   "I promise to hold your hand through every storm. 💫",
   "I promise to be the reason you smile — for as long as you'll let me. 💖"
 ];
@@ -154,11 +154,11 @@ function spawnHearts(el) {
     const d = document.createElement('div');
     d.className = 'fh';
     d.textContent = e;
-    d.style.left = (cx + (Math.random()-0.5)*60) + 'px';
-    d.style.top = (cy + (Math.random()-0.5)*40) + 'px';
+    d.style.left = (cx + (Math.random()-0.5)*80) + 'px';
+    d.style.top  = (cy + (Math.random()-0.5)*50) + 'px';
     d.style.animationDelay = (i*0.12) + 's';
     heartsEl.appendChild(d);
-    setTimeout(()=>d.remove(), 2200);
+    setTimeout(()=>d.remove(), 2300);
   });
 }
 
