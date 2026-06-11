@@ -2,199 +2,184 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Rose Day Surprise 🌹</title>
-
+<title>My Promises to You 🌹</title>
 <style>
-    body {
-        margin: 0;
-        height: 100vh;
-        background: radial-gradient(circle, #ffccd5, #ff4d6d);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-family: "Segoe UI", sans-serif;
-        overflow: hidden;
-    }
-
-    h1 {
-        color: #ffffff;
-        margin-bottom: 5px;
-        text-shadow: 0 0 10px #ff99aa;
-    }
-
-    h2 {
-        color: #ffffff;
-        margin-bottom: 20px;
-        font-weight: normal;
-        text-shadow: 0 0 8px #ffb3c1;
-    }
-
-    .rose {
-        position: relative;
-        width: 300px;
-        height: 300px;
-    }
-
-    .petal {
-        position: absolute;
-        width: 120px;
-        height: 160px;
-        background: linear-gradient(to bottom, #ff0033, #cc0022);
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        text-align: center;
-        padding: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        transition: transform 0.4s ease;
-        user-select: none;
-    }
-
-    .petal:hover {
-        transform: scale(1.05);
-    }
-
-    /* Falling animation */
-    .fall {
-        animation: fall 1.2s forwards ease-in;
-        pointer-events: none;
-    }
-
-    @keyframes fall {
-        to {
-            transform: translateY(600px) rotate(220deg);
-            opacity: 0;
-        }
-    }
-    
-    .p7 { bottom: 20px; right: 90px; }
-    .p6 { bottom: 20px; left: 90px; }
-    .p5 { top: 120px; right: 20px; }
-    .p4 { top: 120px; left: 20px; }
-    .p3 { top: 50px; right: 10px; }
-    .p2 { top: 50px; left: 10px; }
-    .p1 { top: 10px; left: 90px; }
-    
-
-    .center {
-        position: absolute;
-        top: 110px;
-        left: 110px;
-        width: 80px;
-        height: 80px;
-        background: radial-gradient(circle, #ffcc00, #ff9900);
-        border-radius: 50%;
-        box-shadow: 0 0 15px #ffcc00;
-    }
-
-    .message-box {
-        margin-top: 25px;
-        min-height: 40px;
-        color: #ffffff;
-        font-size: 20px;
-        text-align: center;
-        text-shadow: 0 0 8px #ffb3c1;
-        padding: 0 20px;
-    }
-
-    .final-message {
-        display: none;
-        font-size: 28px;
-        color: #ffffff;
-        text-align: center;
-        margin-top: 25px;
-        animation: glow 1.5s infinite alternate;
-        padding: 0 20px;
-    }
-
-    @keyframes glow {
-        from { text-shadow: 0 0 10px #ffffff; }
-        to { text-shadow: 0 0 25px #ffccd5; }
-    }
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Lato:wght@300;400&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:linear-gradient(160deg,#1a0010 0%,#3d0020 50%,#1a0010 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:2rem 1rem 3rem;font-family:'Lato',sans-serif;}
+  .heading{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:#ffd0e0;letter-spacing:1px;margin-bottom:4px;text-align:center;}
+  .subhead{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e09090;margin-bottom:2rem;text-align:center;}
+  .stage{position:relative;width:340px;height:360px;cursor:pointer;}
+  .petal{position:absolute;transform-origin:50% 100%;transition:opacity 0.2s;}
+  .petal.gone{animation:petalDrop 1.3s ease-in forwards;pointer-events:none;}
+  @keyframes petalDrop{
+    0%{opacity:1;transform:var(--rot);}
+    20%{opacity:1;transform:var(--rot) translateY(-16px) rotate(12deg) scale(1.06);}
+    100%{opacity:0;transform:var(--rot) translateY(600px) rotate(260deg) scale(0.6);}
+  }
+  .promise-area{margin-top:1.4rem;min-height:58px;max-width:360px;text-align:center;padding:0 1rem;}
+  .promise-text{font-family:'Playfair Display',serif;font-style:italic;font-size:16px;color:#ffb8cc;line-height:1.65;animation:fadeUp 0.45s ease;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .final-wrap{display:none;margin-top:1.4rem;max-width:380px;text-align:center;padding:1.2rem 1.5rem;border:1px solid #8b2040;border-radius:16px;background:rgba(80,0,30,0.55);animation:bloom 0.9s ease;}
+  @keyframes bloom{from{opacity:0;transform:scale(0.88);}to{opacity:1;transform:none;}}
+  .final-wrap p{font-family:'Playfair Display',serif;font-style:italic;font-size:15px;color:#ffd0e0;line-height:1.75;}
+  .hearts{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;}
+  .fh{position:absolute;font-size:18px;animation:fhUp 2s ease-out forwards;opacity:0;}
+  @keyframes fhUp{0%{opacity:1;transform:translateY(0) scale(1);}100%{opacity:0;transform:translateY(-240px) scale(1.4);}}
 </style>
 </head>
-
 <body>
 
-<h1>🌹 Happy Rose Day 🌹</h1>
-<h2>For my beautiful <span id="name"></span> ❤️</h2>
+<div class="heading">My Promises to You</div>
+<div class="subhead">For Kanishka &nbsp;❤</div>
 
-<div class="rose">
-    <div class="petal p7">Pluck 💌</div>
-    <div class="petal p6">Pluck 💌</div>
-    <div class="petal p5">Pluck 💌</div>
-    <div class="petal p4">Pluck 💌</div>
-    <div class="petal p3">Pluck 💌</div>
-    <div class="petal p2">Pluck 💌</div>
-    <div class="petal p1">Pluck 💌</div>  
-    <div class="center"></div>
+<div class="stage" id="stage">
+<svg width="340" height="360" viewBox="0 0 340 360" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:0;">
+  <defs>
+    <radialGradient id="rg1" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff6688"/>
+      <stop offset="100%" stop-color="#8b1030"/>
+    </radialGradient>
+    <radialGradient id="rg2" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ff4466"/>
+      <stop offset="100%" stop-color="#7a0c28"/>
+    </radialGradient>
+    <radialGradient id="rg3" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#e83058"/>
+      <stop offset="100%" stop-color="#6a0820"/>
+    </radialGradient>
+    <radialGradient id="rg4" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ff8899"/>
+      <stop offset="100%" stop-color="#cc2255"/>
+    </radialGradient>
+    <radialGradient id="rg5" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#ff99aa"/>
+      <stop offset="100%" stop-color="#bb1a44"/>
+    </radialGradient>
+    <radialGradient id="centerG" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffaabb"/>
+      <stop offset="60%" stop-color="#cc2255"/>
+      <stop offset="100%" stop-color="#770020"/>
+    </radialGradient>
+    <filter id="ps" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#330010" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <g id="p0" class="petal" style="--rot:rotate(-2deg);" filter="url(#ps)">
+    <path d="M170,185 C148,155 130,115 138,72 C143,45 158,28 170,20 C182,28 197,45 202,72 C210,115 192,155 170,185Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="0.8"/>
+    <path d="M170,175 C155,150 142,118 148,82 C152,60 162,44 170,36 C178,44 188,60 192,82 C198,118 185,150 170,175Z" fill="#ff7799" opacity="0.25"/>
+  </g>
+
+  <g id="p1" class="petal" style="--rot:rotate(49deg);transform-origin:170px 210px;" filter="url(#ps)">
+    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg2)" stroke="#5a0018" stroke-width="0.8" transform="rotate(49,170,210)"/>
+    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ff6688" opacity="0.22" transform="rotate(49,170,210)"/>
+  </g>
+
+  <g id="p2" class="petal" style="--rot:rotate(100deg);transform-origin:170px 210px;" filter="url(#ps)">
+    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg3)" stroke="#5a0018" stroke-width="0.8" transform="rotate(100,170,210)"/>
+    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ee5577" opacity="0.22" transform="rotate(100,170,210)"/>
+  </g>
+
+  <g id="p3" class="petal" style="--rot:rotate(151deg);transform-origin:170px 210px;" filter="url(#ps)">
+    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="0.8" transform="rotate(151,170,210)"/>
+    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ff7799" opacity="0.22" transform="rotate(151,170,210)"/>
+  </g>
+
+  <g id="p4" class="petal" style="--rot:rotate(202deg);transform-origin:170px 210px;" filter="url(#ps)">
+    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg2)" stroke="#5a0018" stroke-width="0.8" transform="rotate(202,170,210)"/>
+    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ff6688" opacity="0.22" transform="rotate(202,170,210)"/>
+  </g>
+
+  <g id="p5" class="petal" style="--rot:rotate(253deg);transform-origin:170px 210px;" filter="url(#ps)">
+    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg3)" stroke="#5a0018" stroke-width="0.8" transform="rotate(253,170,210)"/>
+    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ee5577" opacity="0.22" transform="rotate(253,170,210)"/>
+  </g>
+
+  <g id="p6" class="petal" style="--rot:rotate(304deg);transform-origin:170px 210px;" filter="url(#ps)">
+    <path d="M170,210 C148,180 130,140 138,97 C143,70 158,53 170,45 C182,53 197,70 202,97 C210,140 192,180 170,210Z" fill="url(#rg1)" stroke="#5a0018" stroke-width="0.8" transform="rotate(304,170,210)"/>
+    <path d="M170,200 C155,175 142,143 148,107 C152,85 162,69 170,61 C178,69 188,85 192,107 C198,143 185,175 170,200Z" fill="#ff7799" opacity="0.22" transform="rotate(304,170,210)"/>
+  </g>
+
+  <g id="innerPetals">
+    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.6" transform="rotate(24,170,195)"/>
+    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.6" transform="rotate(96,170,195)"/>
+    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg5)" stroke="#6a0820" stroke-width="0.6" transform="rotate(168,170,195)"/>
+    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg5)" stroke="#6a0820" stroke-width="0.6" transform="rotate(240,170,195)"/>
+    <path d="M170,195 C156,175 148,150 154,122 C158,104 165,94 170,88 C175,94 182,104 186,122 C192,150 184,175 170,195Z" fill="url(#rg4)" stroke="#6a0820" stroke-width="0.6" transform="rotate(312,170,195)"/>
+  </g>
+
+  <circle cx="170" cy="185" r="30" fill="url(#centerG)" stroke="#880030" stroke-width="1"/>
+  <circle cx="170" cy="185" r="20" fill="#ff99aa" opacity="0.35"/>
+  <circle cx="163" cy="178" r="8" fill="#ffbbcc" opacity="0.4"/>
+
+  <path d="M170,215 C170,240 162,268 158,300" stroke="#2d6e20" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M162,255 C140,242 125,248 118,260 C132,262 148,258 162,268" fill="#3a8228" stroke="none"/>
+  <path d="M164,275 C148,270 138,278 134,290 C146,289 156,283 166,280" fill="#337020" stroke="none"/>
+
+  <text x="170" y="330" text-anchor="middle" font-family="'Playfair Display',serif" font-style="italic" font-size="11" fill="#e09090" letter-spacing="1">tap a petal ✦</text>
+</svg>
+<div class="hearts" id="hearts"></div>
 </div>
 
-<div class="message-box" id="messageBox">
-    Pluck a petal to read my heart 💕
+<div class="promise-area">
+  <div class="promise-text" id="promText">Each petal holds a promise for you 🌹</div>
 </div>
-
-<div class="final-message" id="finalMessage">
-    💖 Swagata, you are my calm in chaos, my smile on hard days, and my happiest thought every night. Loving you feels natural, safe, and beautiful. I’m so grateful for you—today and always. ❤️✨ 💖
+<div class="final-wrap" id="finalWrap">
+  <p>Kanishka, you are my calm in chaos, my smile on hard days, and my happiest thought every night. Every promise I've made today lives in my heart — not just for today, but for every day I get to love you. You are my favourite human being that could ever exist.... ❤</p>
 </div>
-
-<!-- Background Music -->
-<audio id="music" loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
 
 <script>
-    const girlfriendName = "Swagata";
-    document.getElementById("name").innerText = girlfriendName;
+const promises = [
+  "I promise to always choose us, even on the hardest days. 🌹",
+  "I promise your happiness will always matter to me. 💕",
+  "I promise to be your safe place, always. 🤍",
+  "I promise to love you more than you expect me to. ✨",
+  "I promise to never stop making you feel special, save, cared, loved. 🌸",
+  "I promise to hold your hand through every storm. 💫",
+  "I promise to be the reason you smile — for as long as you'll let me. 💖"
+];
+const ids = ['p0','p1','p2','p3','p4','p5','p6'];
+const promText = document.getElementById('promText');
+const finalWrap = document.getElementById('finalWrap');
+const heartsEl = document.getElementById('hearts');
+let count = 0;
 
-    const messages = [
-        "I never choose you but i feel like destiny chose us to be and i happy that it did. 🌹",
-        "I fell for you very hard and would love to keep falling for you. 💞",
-        "With your presence my life feel happening  ❤️",
-        "Loving you is what I enjoy the most and i want to enjoy every part of this. ✨",
-        "Your smile just makes me forget everything around me. 😍",
-        "I really do love you a lot then i myself expected.💞",
-        "Swagata, First thank you for being in my life. 🌸", 
-    ];
+function spawnHearts(el) {
+  const rect = el.getBoundingClientRect();
+  const stageRect = document.getElementById('stage').getBoundingClientRect();
+  const cx = rect.left + rect.width/2 - stageRect.left;
+  const cy = rect.top + rect.height/2 - stageRect.top;
+  ['❤️','💕','🌹','✨','💖'].forEach((e,i) => {
+    const d = document.createElement('div');
+    d.className = 'fh';
+    d.textContent = e;
+    d.style.left = (cx + (Math.random()-0.5)*60) + 'px';
+    d.style.top = (cy + (Math.random()-0.5)*40) + 'px';
+    d.style.animationDelay = (i*0.12) + 's';
+    heartsEl.appendChild(d);
+    setTimeout(()=>d.remove(), 2200);
+  });
+}
 
-    const petals = document.querySelectorAll(".petal");
-    const messageBox = document.getElementById("messageBox");
-    const finalMessage = document.getElementById("finalMessage");
-    const music = document.getElementById("music");
-
-    let musicStarted = false;
-
-    petals.forEach((petal, index) => {
-        petal.addEventListener("click", () => {
-
-            if (!musicStarted) {
-                music.play().catch(() => {});
-                musicStarted = true;
-            }
-
-            messageBox.innerText = messages[index];
-            petal.classList.add("fall");
-
-            const remaining = [...petals].filter(p => !p.classList.contains("fall"));
-
-            if (remaining.length === 0) {
-                setTimeout(() => {
-                    finalMessage.style.display = "block";
-                }, 1000);
-            }
-        });
-    });
+ids.forEach((id,idx) => {
+  const el = document.getElementById(id);
+  el.style.cursor = 'pointer';
+  el.addEventListener('click', () => {
+    if (el.classList.contains('gone')) return;
+    el.classList.add('gone');
+    spawnHearts(el);
+    promText.style.animation = 'none';
+    promText.offsetHeight;
+    promText.style.animation = '';
+    promText.textContent = promises[idx];
+    count++;
+    if (count === ids.length) {
+      setTimeout(() => { finalWrap.style.display = 'block'; }, 1300);
+    }
+  });
+});
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
